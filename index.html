@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Wir übernehmen</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
@@ -15,14 +17,14 @@
     <div class="row">
       <div class="col-sm-8">
        <ul class="top_nav">
-        <li><a href="#"><img src="img/house_icon.png"><p>Home</p></a></li>
+        <li><a href="#services"><img src="img/house.png"><p>Home</p></a></li>
         <li><a href="#"><img src="img/stack.png"><p>Serviceleistungen</p></a></li>
         <li><a href="#"><img src="img/message.png"><p>Kontakt</p></a></li>
         <li><a href="#"><img src="img/download.png"><p>Support</p></a></li>
        </ul>
       </div>
       <div class="col-sm-4 text-right">
-        <ul class="top_nav">
+        <ul class="top_nav second">
           <li><a href="#">AGB</a></li>
           <li><a href="#">Impressum</a></li>
         </ul>
@@ -47,7 +49,7 @@
    </div>
  </div>
 
- <div class="services container-fluid">
+ <div class="services container-fluid" id="services">
    <div class="container">
     <div class="img_title">
       <img src="img/stack.png">
@@ -136,12 +138,16 @@
    </div>
  </div>
 
- <div class="contacts container-fluid">
-   <div class="container">
-     <div class="img_title">
+<div class="container-fluid">
+  <div class="container">
+    <div class="img_title">
      <img src="img/message.png">
      <h4>KONTAKT</h4>
     </div>
+  </div>
+</div>
+ <div class="contacts container-fluid">
+   <div class="container">
     <div class="contact_box_title">
      <h6>D A T E N R E I S E B U E R O</h6>
      <p>EDV & IT Management und Dienstleistung GmbH</p>
@@ -158,7 +164,7 @@
            Neutorgasse 51, 8010 Graz</p>
       </div>
       <div class="block">
-        <div class="icons" style="background-position: 0px -3px"></div>
+        <div class="icons" style="background-position: 0px -115px; height: 25px"></div>
         <p>office@drb.at</p>
       </div>
     </div>
@@ -180,6 +186,7 @@
      <div><img src="img/logo.png" class="img-responsive"></div>
      <div><img src="img/logo.png" class="img-responsive"></div>
      <div><img src="img/logo.png" class="img-responsive"></div>
+     <div><img src="img/logo.png" class="img-responsive"></div>
    </div>
    </div>  
   </div>
@@ -187,11 +194,12 @@
 
 <div class="container-fluid footer">
     <div class="container">
-      <div class="col-md-4">
-        <img src="img/logo.png" class="img-responsive">
+     <div class="row">
+       <div class="col-md-4">
+        <img src="img/logo.png" class="img-responsive logo">
         <p class="we_like">We like <span>IT</span>!</p>
       </div>
-      <div class="col-md-8">
+      <div class="col-md-8 text-right">
         <ul class="footer_nav">
           <li><a href="#">Home</a></li>
           <li><a href="#">Serviceleistungen</a></li>
@@ -201,11 +209,54 @@
           <li class="light"><a href="#">Impressum</a></li>
         </ul>
       </div>
+     </div>
     </div>
 </div>
 
-<script src="/js/jquery-3.1.0.min.js"></script>
+<!--<script src="js/jquery-3.1.0.min.js"></script>-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+<script src="js/owl.carousel.min.js"></script>
 <script type="text/javascript">
+
+// scroll link function
+function scroll(link){
+   var link = link.attr('href')
+  $(document).on("click","a[href = '" + link + "']", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 800);
+    });
+}
+$(document).ready(function() {
+  console.log('document is ready');
+  $('a.scroll_link').click(function(){
+    scroll( $(this) );
+  });
+
+  $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:15,
+    navText:'',  
+    responsiveClass:true,
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+        },
+        600:{
+            items:3,
+            nav:false
+        },
+        1000:{
+            items:4,
+            nav:true,
+            loop:false
+        }
+    }
+});
+});
+
 </script>
 </body>
 </html>

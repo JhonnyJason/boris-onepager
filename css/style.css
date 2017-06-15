@@ -169,6 +169,12 @@ body{
     padding-bottom: 20px;
     background: #fff;
 }
+.header .top_nav.second{
+    padding-top: 8px;
+}
+.header .top_nav.second li:hover a{
+    color: #fd9400;
+}
 .header .top_nav li{
     display: inline-block;
     margin-right: 20px;
@@ -184,15 +190,17 @@ body{
     margin-right: 7px;
 }
 .header .top_nav li p{
+    display: inline-block;
     font-size: 14px;
     color: #000;
+    vertical-align: middle;
 }
 .header .top_nav li:hover p{
     color: #fd9400;
     transition: 0.4s;
 }
 .top_poster{
-    padding-top: 190px;
+    padding-top: 170px;
     padding-bottom: 90px;
     background: url(../img/top_bg.jpg);
     background-size: cover;  
@@ -202,9 +210,11 @@ body{
 }
 .top_poster h1{
     font-family: "OpenSans-Regular";
-    font-size: 25px;
+    font-size: 30px;
     color: #fff;
-    text-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
+    line-height: 1.3;
+    padding-left: 30px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
 }
 .welcome{
     padding-top: 50px;
@@ -216,7 +226,7 @@ body{
 }
 .welcome h3{
     font-family: "OpenSans-Regular";
-    font-size: 18px;
+    font-size: 24px;
     color: #2a2521;
     margin-bottom: 25px;
 }
@@ -224,7 +234,7 @@ body{
     font-family: "OpenSans-Regular";
     font-size: 14px;
     color: #58585b;
-    line-height: 1.3;
+    line-height: 1.5;
 }
 .services{
     padding-bottom: 60px;
@@ -239,22 +249,24 @@ body{
 .img_title img{
     display: inline-block;
     width: 60px;
-    margin-right: 5px;
+    margin-right: 10px;
     vertical-align: middle;
 }
 .img_title h4{
     display: inline-block;
     vertical-align: middle;
-    font-size: 18px;
+    font-size: 24px;
     font-family: "OpenSans-Regular";
 }
 .services .service{
     margin-bottom: 30px;
+    padding: 0 20px;
 }
 .services .service img{
     display: block;
     height: 45px;
     margin: 0 auto 30px;
+    padding-right: 20px;
 }
 .services .service h5{
     font-size: 14px;
@@ -279,25 +291,25 @@ body{
     width: 410px;
     position: relative;
     background: #fff;
-    padding: 30px 15px 15px 25px;
+    padding: 25px 15px 15px 25px;
     -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.45);
 -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.45);
 box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.45);
 }
 .contacts .contact_box_title h6{
-    font-size: 14px;
+    font-size: 18px;
     color: #000;
     margin-bottom: 5px;
 }
 .contacts .contact_box_title p{
     font-family: "OpenSans-Regular";
-    font-size: 12px;
+    font-size: 14px;
     color: #58585b;
 }
 .contacts .info{
     width: 290px;
     background: #fff;
-    padding: 20px 25px 10px 25px;
+    padding: 25px 25px 10px 25px;
     -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.45);
 -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.45);
 box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.45);
@@ -305,12 +317,15 @@ box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.45);
 .contacts .info .block{
     margin-bottom: 20px;
 }
+.contacts .info .block:last-of-type{
+    margin-bottom: 0;
+}
 .contacts .info .icons{
-    background: url(../img/contact_icons.png) no-repeat;
+    background: url(../img/contact_icons.jpg) no-repeat;
     display: inline-block;
     margin-right: 10px;
     width: 34px;
-    height: 39px;
+    height: 37px;
 }
 .contacts .info p{
     display: inline-block;
@@ -318,7 +333,8 @@ box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.45);
     font-family: "OpenSans-Regular";
     font-size: 12px;
     color: #58585b;
-    line-height: 1.2;
+    line-height: 1.3;
+    padding-bottom: 5px;
 }
 
 .references{
@@ -332,23 +348,29 @@ box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.45);
     border-bottom: 1px solid #fec36f;
 }
 .references .carousel{
-    padding-top: 50px;
     padding-bottom: 50px;
     position: relative;
+    height: 70px;
+    width: 100%;
+    padding: 0 40px;
 }
 .references .carousel .owl-prev, .references .carousel .owl-next{
     position: absolute;
     height: 36px;
     width: 36px;
-    top: 10px;
+    top: 30px;
+}
+.references .carousel .owl-prev.disabled, .references .carousel .owl-next.disabled{
+    opacity: 0.3;
+    cursor: default;
 }
 .references .carousel .owl-prev{
-    background: url(../img/arrow_l.png);
-    left: -20px;
+    background: url(../img/slider_arrow_l.jpg);
+    left: -55px;
 }
 .references .carousel .owl-next{
-    background: url(../img/arrow_r.png);
-    right: -20px;
+    background: url(../img/slider_arrow_r.jpg);
+    right: -55px;
 }
 
 .footer{
@@ -358,9 +380,11 @@ box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.45);
 }
 .footer .logo{
     width: 165px;
+    display: inline-block;
+    margin-right: 15px;
 }
 .footer p.we_like{
-    font-size: 22px;
+    font-size: 25px;
     color: #58585b;
     display: inline-block;
 }
@@ -373,7 +397,7 @@ box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.45);
 .footer .footer_nav li{
     display: inline-block;
     font-size: 14px;
-    margin-right: 5px;
+    margin-left: 15px;
     color: #000;
 }
 .footer .footer_nav li a{
