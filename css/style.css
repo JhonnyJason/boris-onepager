@@ -6,6 +6,12 @@
     font-style: normal;
 }
 @font-face {
+    font-family: 'OpenSans-Bold';
+    src: url('fonts/OpenSans-Bold.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
     font-family: 'OpenSans-Light';
     src: url('fonts/OpenSans-Light.ttf');
     font-weight: normal;
@@ -74,11 +80,6 @@ a:hover{
 ul{
     margin: 0;
 }
-body{
-    font-family: 'Futura';
-    font-size: 14px;
-    color: #333;
-}
 strong{
     font-weight: bold;
 }
@@ -98,7 +99,7 @@ textarea:focus {outline:none;}
 select:focus {outline:none;}
 @media (min-width: 1400px){
     .container{
-        width: 1300px;
+        width: 1170px;
     }
 }
 .toggle_mob_nav{
@@ -159,7 +160,7 @@ button:hover{
     box-shadow: none;
 }
 body{
-    font-family: "OpenSans-Regular";
+    font-family: "OpenSans-Bold";
     font-size: 12px;
     color: #383430;
 }
@@ -180,7 +181,7 @@ body{
     width: 30px;
     display: inline-block;
     vertical-align: middle;
-    margin-right: 5px;
+    margin-right: 7px;
 }
 .header .top_nav li p{
     font-size: 14px;
@@ -193,14 +194,14 @@ body{
 .top_poster{
     padding-top: 190px;
     padding-bottom: 90px;
-    background: url(../img/top_bg.png);
+    background: url(../img/top_bg.jpg);
     background-size: cover;  
 }
 .top_poster img{
     margin-bottom: 25px;
 }
 .top_poster h1{
-    font-family: "OpenSans-Light";
+    font-family: "OpenSans-Regular";
     font-size: 25px;
     color: #fff;
     text-shadow: 2px 2px 2px rgba(150, 150, 150, 1);
@@ -214,13 +215,13 @@ body{
     border-bottom: 1px solid #fec36f;
 }
 .welcome h3{
-    font-family: "OpenSans-Light";
+    font-family: "OpenSans-Regular";
     font-size: 18px;
     color: #2a2521;
     margin-bottom: 25px;
 }
 .welcome p{
-    font-family: "OpenSans-Light";
+    font-family: "OpenSans-Regular";
     font-size: 14px;
     color: #58585b;
     line-height: 1.3;
@@ -245,12 +246,13 @@ body{
     display: inline-block;
     vertical-align: middle;
     font-size: 18px;
-    font-family: "OpenSans-Light";
+    font-family: "OpenSans-Regular";
 }
 .services .service{
     margin-bottom: 30px;
 }
 .services .service img{
+    display: block;
     height: 45px;
     margin: 0 auto 30px;
 }
@@ -260,12 +262,14 @@ body{
 }
 .services .service p{
     font-size: 12px;
-    font-family: "OpenSans-Light";
+    font-family: "OpenSans-Regular";
     line-height: 1.2;
 }
 
 .contacts{
     position: relative; 
+    background: url(../img/maps_bg.jpg);
+    background-size: cover;
 }
 .contacts .container{
     padding-top: 70px;
@@ -273,10 +277,12 @@ body{
 }
 .contacts .contact_box_title{
     width: 410px;
+    position: relative;
+    background: #fff;
     padding: 30px 15px 15px 25px;
-    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.62);
--moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.62);
-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.62);
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.45);
+-moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.45);
+box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.45);
 }
 .contacts .contact_box_title h6{
     font-size: 14px;
@@ -284,32 +290,42 @@ box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.62);
     margin-bottom: 5px;
 }
 .contacts .contact_box_title p{
-    font-family: "OpenSans-Light";
+    font-family: "OpenSans-Regular";
     font-size: 12px;
     color: #58585b;
 }
 .contacts .info{
     width: 290px;
-    padding: 20px 25px 0 25px;
-    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.62);
--moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.62);
-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.62);
+    background: #fff;
+    padding: 20px 25px 10px 25px;
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.45);
+-moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.45);
+box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.45);
+}
+.contacts .info .block{
+    margin-bottom: 20px;
 }
 .contacts .info .icons{
     background: url(../img/contact_icons.png) no-repeat;
     display: inline-block;
     margin-right: 10px;
+    width: 34px;
+    height: 39px;
 }
 .contacts .info p{
     display: inline-block;
     vertical-align: bottom;
-    font-family: "OpenSans-Light";
+    font-family: "OpenSans-Regular";
     font-size: 12px;
     color: #58585b;
+    line-height: 1.2;
 }
 
 .references{
     padding-top: 50px;
+}
+.references .img_title img{
+    width: 36px;
 }
 .references .container{
     padding-bottom: 50px;
@@ -340,10 +356,13 @@ box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.62);
     padding-bottom: 25px;
     border-bottom: 18px solid #fd9400;
 }
+.footer .logo{
+    width: 165px;
+}
 .footer p.we_like{
-    font-family: "OpenSans-Regular";
-    font-size: 20px;
+    font-size: 22px;
     color: #58585b;
+    display: inline-block;
 }
 .footer p.we_like span{
     color: #fd9400;
@@ -365,5 +384,5 @@ box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.62);
     color: #fd9400;
 }
 .footer .footer_nav li.light{
-    font-family: "OpenSans-Light";
+    font-family: "OpenSans-Regular";
 }
