@@ -15,15 +15,15 @@
  <div class="header container-fluid">
   <div class="container">
     <div class="row">
-      <div class="col-sm-8">
+      <div class="col-sm-9">
        <ul class="top_nav">
-        <li><a href="#services"><img src="img/house.png"><p>Home</p></a></li>
-        <li><a href="#"><img src="img/stack.png"><p>Serviceleistungen</p></a></li>
-        <li><a href="#"><img src="img/message.png"><p>Kontakt</p></a></li>
+        <li><a href="#"><img src="img/house.png"><p>Home</p></a></li>
+        <li><a href="#services" class="scroll_link"><img src="img/stack.png"><p>Serviceleistungen</p></a></li>
+        <li><a href="#contacts" class="scroll_link"><img src="img/message.png"><p>Kontakt</p></a></li>
         <li><a href="#"><img src="img/download.png"><p>Support</p></a></li>
        </ul>
       </div>
-      <div class="col-sm-4 text-right">
+      <div class="col-sm-3 text-right">
         <ul class="top_nav second">
           <li><a href="#">AGB</a></li>
           <li><a href="#">Impressum</a></li>
@@ -138,7 +138,7 @@
    </div>
  </div>
 
-<div class="container-fluid">
+<div class="container-fluid" id="contacts">
   <div class="container">
     <div class="img_title">
      <img src="img/message.png">
@@ -147,6 +147,7 @@
   </div>
 </div>
  <div class="contacts container-fluid">
+ <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.513945576233!2d30.51472931564679!3d50.43152697947277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf1d5b6964ff%3A0x7bbba634b45bb6a8!2z0JrQuNGX0LLRgdGM0LrQuNC5INC_0LvQsNC90LXRgtCw0YDRltC5!5e0!3m2!1suk!2sua!4v1497529624284" width="1920" height="800" frameborder="0" style="border:0" allowfullscreen></iframe>
    <div class="container">
     <div class="contact_box_title">
      <h6>D A T E N R E I S E B U E R O</h6>
@@ -195,11 +196,11 @@
 <div class="container-fluid footer">
     <div class="container">
      <div class="row">
-       <div class="col-md-4">
+       <div class="col-md-4 col-sm-3">
         <img src="img/logo.png" class="img-responsive logo">
         <p class="we_like">We like <span>IT</span>!</p>
       </div>
-      <div class="col-md-8 text-right">
+      <div class="col-md-8 col-sm-9 text-right">
         <ul class="footer_nav">
           <li><a href="#">Home</a></li>
           <li><a href="#">Serviceleistungen</a></li>
@@ -246,12 +247,11 @@ $(document).ready(function() {
         },
         600:{
             items:3,
-            nav:false
+            nav:true
         },
         1000:{
             items:4,
-            nav:true,
-            loop:false
+            nav:true
         }
     }
 });
