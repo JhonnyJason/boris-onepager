@@ -193,7 +193,7 @@ body{
 .top_poster{
     padding-top: 190px;
     padding-bottom: 90px;
-    background: url(/img/top_bg.png);
+    background: url(../img/top_bg.png);
     background-size: cover;  
 }
 .top_poster img{
@@ -296,7 +296,7 @@ box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.62);
 box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.62);
 }
 .contacts .info .icons{
-    background: url(/img/contact_icons.png) no-repeat;
+    background: url(../img/contact_icons.png) no-repeat;
     display: inline-block;
     margin-right: 10px;
 }
@@ -327,11 +327,11 @@ box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.62);
     top: 10px;
 }
 .references .carousel .owl-prev{
-    background: url(/img/arrow_l.png);
+    background: url(../img/arrow_l.png);
     left: -20px;
 }
 .references .carousel .owl-next{
-    background: url(/img/arrow_r.png);
+    background: url(../img/arrow_r.png);
     right: -20px;
 }
 
