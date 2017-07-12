@@ -4,11 +4,23 @@
   <meta charset="utf-8">
     <meta http-equiv="Content-Type" name="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
     <title>Wir übernehmen Verantwortung für Ihre EDV und IT-Landschaft</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
     <link rel="stylesheet" type="text/css" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+
 </head>
 <body>
  
@@ -20,7 +32,7 @@
         <li><a href="#header"><img src="img/house.png"><p>Home</p></a></li>
         <li><a href="#services" class="scroll_link"><img src="img/stack.png"><p>Serviceleistungen</p></a></li>
         <li><a href="#contacts" class="scroll_link"><img src="img/message.png"><p>Kontakt</p></a></li>
-        <li><a href="#services" class="scroll_link"><img src="img/download.png"><p>Support</p></a></li>
+        <li><a href="#support" onclick="showSupportSection()"><img src="img/download.png"><p>Support</p></a></li>
        </ul>
        <img src="img/hamburger.png" class="hamburger">
       </div>
@@ -37,7 +49,7 @@
         <li><a href="#header"><img src="img/house.png"><p>Home</p></a></li>
         <li><a href="#services" class="scroll_link"><img src="img/stack.png"><p>Serviceleistungen</p></a></li>
         <li><a href="#contacts" class="scroll_link"><img src="img/message.png"><p>Kontakt</p></a></li>
-        <li><a href="#services" class="scroll_link"><img src="img/download.png"><p>Support</p></a></li>
+        <li><a href="#support" onclick="showSupportSection()"><img src="img/download.png"><p>Support</p></a></li>
     </ul>
   </div>
  </div>
@@ -134,12 +146,12 @@
       </p>
       </div>
      </div>
-     <div class="col-md-3 col-sm-6">
+     <div class="col-md-3 col-sm-6" id="support-section">
       <div class="service">
       <img src="img/download.png" height="55px">
       <h5>Datenreisebüro Support</h5>
-      <p>> Download für Windows<br>
-         > Download für App
+        <p><a href="">> Download für Windows</a><br>
+          <a href="">> Download für Apple</a>
       </p>
       </div>
      </div>
@@ -156,7 +168,7 @@
   </div>
 </div>
  <div class="contacts container-fluid">
- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2717.6006333763444!2d15.43589831561183!3d47.067683979152584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476e357eb73b83b7%3A0x80d33fbc135adcd3!2sNeutorgasse+51%2C+8010+Graz!5e0!3m2!1sru!2sat!4v1497972113355" width="1920" height="800" frameborder="0" style="border:0" allowfullscreen></iframe>
+   <div id="map"></div>
    <div class="container">
     <div class="contact_box_title">
      <h6>D A T E N R E I S E B U E R O</h6>
@@ -202,6 +214,8 @@
   </div>
  </div>-->
 
+<a id="upwards-button" href="#header"></a>
+
 <div class="container-fluid footer" id="footer">
     <div class="container">
      <div class="row">
@@ -214,7 +228,7 @@
           <li><a href="#header" class="scroll_link">Home</a></li>
           <li><a href="#services" class="scroll_link">Serviceleistungen</a></li>
           <li><a href="#contacts" class="scroll_link">Kontakt</a></li>
-          <li><a href="#services" class="scroll_link">Support</a></li>
+          <li><a href="#support" onclick="showSupportSection()">Support</a></li>
           <li class="light"><a href="pdf/AGB-DRB.pdf" target="_blank">AGB</a></li>
         </ul>
       </div>
@@ -224,21 +238,15 @@
 
 <!--<script src="js/jquery-3.1.0.min.js"></script>-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-<script src="js/owl.carousel.min.js"></script>
+<!--script src="js/owl.carousel.min.js"></script-->
 <script type="text/javascript">
 
-// scroll link function
-function scroll(link){
-   var link = link.attr('href')
-  $(document).on("click","a[href = '" + link + "']", function (event) {
-        event.preventDefault();
-        var id  = $(this).attr('href'),
-            top = $(id).offset().top;
-        $('body,html').animate({scrollTop: top}, 800);
-    });
-}
-$(document).ready(function() {
-  console.log('document is ready');
+
+  window.onscroll = onScroll;
+
+
+  $(document).ready(function() {
+  //console.log('document is ready');
   $('a.scroll_link').click(function(){
     scroll( $(this) );
   });
@@ -249,7 +257,7 @@ $(document).ready(function() {
     });
   });
 
-  $('.owl-carousel').owlCarousel({
+/*  $('.owl-carousel').owlCarousel({
     loop:true,
     margin:15,
     navText:'',  
@@ -268,9 +276,84 @@ $(document).ready(function() {
             nav:true
         }
     }
-});
+
+  });*/
 });
 
+  //highlight the support section for short time
+  function showSupportSection() {
+    if(window.innerWidth > 1000) {
+      var top = $("#services").offset().top;
+      $('body,html').animate({scrollTop: top}, 800);
+
+      document.getElementById("support-section").classList.add("highlighted");
+      setTimeout(function (){document.getElementById("support-section").classList.remove("highlighted");}, 1000);
+    } else {
+      var top = $("#support-section").offset().top;
+      $('body,html').animate({scrollTop: top}, 800);
+    }
+
+  }
+
+  //function is called on every scroll - check if we need the upwards button :-)
+  function onScroll() {
+    //console.log("onScroll");
+    //console.log("y is: " + window.scrollY);
+
+    if(window.scrollY > 50) {
+      document.getElementById("upwards-button").classList.add("shown");
+    } else {
+      document.getElementById("upwards-button").classList.remove("shown");
+    }
+  }
+
+  // scroll link function
+  function scroll(link){
+    var link = link.attr('href')
+    $(document).on("click","a[href = '" + link + "']", function (event) {
+      event.preventDefault();
+      var id  = $(this).attr('href'),
+        top = $(id).offset().top;
+      $('body,html').animate({scrollTop: top}, 800);
+    });
+  }
+
+
+
 </script>
+
+<!-- Google APIs Code -->
+ <script>
+
+   //google Analytics--------------------------------------------------------------------------------------
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+   ga('create', 'UA-102397728-1', 'auto');
+   ga('send', 'pageview');
+
+
+   //google Maps API --------------------------------------------------------------------------------------
+   function initMap() {
+
+     var position = {lat: 47.0674631, lng: 15.4378364};
+
+     var map = new google.maps.Map(document.getElementById('map'), {
+       zoom: 15,
+       center: position
+     });
+
+     var marker = new google.maps.Marker({
+       position: position,
+       map: map
+     });
+   }
+ </script>
+ <script async defer
+         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvn9E6v2jQ7ETIc1s4Soj9iOE9NFrlnb0&callback=initMap">
+ </script>
+
 </body>
 </html>
