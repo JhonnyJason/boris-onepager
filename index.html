@@ -39,7 +39,7 @@
       <div class="col-sm-3 col-xs-10 text-right">
         <ul class="top_nav second">
           <li><a href="pdf/AGB-DRB.pdf" target="_blank">AGB</a></li>
-          <li><a href="#footer" class="scroll_link">Impressum</a></li>
+          <li><a href="#" class="imp_link">Impressum</a></li>
         </ul>
       </div>
     </div>    
@@ -236,7 +236,12 @@
      </div>
     </div>
 </div>
-
+<div id="imp">
+  <h3>Disebüro atenreist</h3>
+  <p>Disebüro atenreist ein EDV- und IT-Dienstleistungs- und Beratungsunternehmen für Komplettlösungen aus einer Hand und
+     steht für langfristige Partnerschaften, wirtschaftliches Denken, Nachhaltigkeit und effiziente Betreuung.</p>
+     <div class="close_icon"><span>x</span></div>
+</div>
  
 
 <!--<script src="js/jquery-3.1.0.min.js"></script>-->
@@ -259,7 +264,14 @@
       $('.mob_nav').hide();
     });
   });
-
+  $('a.imp_link').click(function(){
+    $('#imp').fadeToggle();
+    $(this).toggleClass('active');
+    $('#imp .close_icon').click(function(){
+      $('#imp').fadeOut();
+      $('a.imp_link').removeClass('active');
+    });
+  });
 /*  $('.owl-carousel').owlCarousel({
     loop:true,
     margin:15,

@@ -220,6 +220,46 @@ body{
     color: #fd9400;
     transition: 0.4s;
 }
+#imp{
+    position: fixed;
+    top: 80px;
+    display: none;
+    right: 0;
+    width: 230px;
+    padding: 15px;
+    padding-top: 20px;
+    background: #fd9400;
+}
+#imp h3{
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #333;
+    font-family: "OpenSans-Light";
+}
+#imp p{
+    font-size: 14px;
+    color: #333;
+    font-family: "OpenSans-Light";
+    line-height: 1.5;
+}
+#imp .close_icon{
+    cursor: pointer;
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    font-size: 15px;
+    color: #fff;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    background: #333;
+    border: 1px solid #fff;
+    font-family: "OpenSans-Light";
+}
+a.active{
+    color: #fd9400 !important;
+}
 .top_poster{
     padding-top: 170px;
     padding-bottom: 90px;
