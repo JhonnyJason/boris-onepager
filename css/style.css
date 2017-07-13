@@ -158,6 +158,10 @@ select:focus {outline:none;}
     height: 100%;
     border: 0;
 }
+.content{
+    max-width: 1600px;
+    margin: 0 auto;
+}
 button:hover{
     transition: 0.4s;
     box-shadow: none;
@@ -463,11 +467,11 @@ box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.45);
 
 .footer{
     padding-top: 5px;
-    padding-bottom: 25px;
+    padding-bottom: 10px;
     border-bottom: 18px solid #fd9400;
 }
 .footer .logo{
-    width: 165px;
+    width: 190px;
     display: inline-block;
     margin-right: 15px;
 }
@@ -480,7 +484,7 @@ box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.45);
     color: #fd9400;
 }
 .footer .footer_nav{
-    padding-top: 40px;
+    padding-top: 30px;
 }
 .footer .footer_nav li{
     display: inline-block;
