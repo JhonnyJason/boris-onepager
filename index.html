@@ -267,6 +267,7 @@
   $('a.imp_link').click(function(){
     $('#imp').fadeToggle();
     $(this).toggleClass('active');
+    
     $('#imp .close_icon').click(function(){
       $('#imp').fadeOut();
       $('a.imp_link').removeClass('active');
