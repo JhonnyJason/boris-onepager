@@ -159,8 +159,6 @@ select:focus {outline:none;}
     border: 0;
 }
 .content{
-    max-width: 1600px;
-    margin: 0 auto;
 }
 button:hover{
     transition: 0.4s;
@@ -220,47 +218,74 @@ body{
     color: #fd9400;
     transition: 0.4s;
 }
+#full-with-poster-container {
+    width: 100%;
+    position: relative;
+}
 #imp{
-    position: fixed;
-    top: 80px;
-    display: none;
-    right: 0;
-    width: 230px;
+    position: absolute;
+    top: 10px;
+    right: -330px;
+    width: 320px;
     padding: 15px;
     padding-top: 20px;
-    background: #fd9400;
+    background: #F39800;
+    transition: right 1s;
+    border-radius: 3px;
+}
+#imp.shown {
+    right: 0;
 }
 #imp h3{
     font-size: 16px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
     color: #333;
     font-family: "OpenSans-Light";
+    font-weight: bold;
+    border-bottom: solid 2px white;
 }
 #imp p{
     font-size: 14px;
     color: #333;
     font-family: "OpenSans-Light";
     line-height: 1.5;
+    padding-bottom: 5px;
+}
+#imp p:last-child {
+    border-bottom: solid 2px white;
 }
 #imp .close_icon{
     cursor: pointer;
     position: absolute;
-    top: -5px;
-    left: -5px;
-    font-size: 15px;
-    color: #fff;
-    width: 20px;
-    height: 20px;
-    text-align: center;
+    top: -8px;
+    left: -8px;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
-    background: #333;
-    border: 1px solid #fff;
-    font-family: "OpenSans-Light";
+    border: 2px solid #4e4e4e;
+    background: #dadada;
 }
+#imp .close_icon .close-x {
+    stroke: #4e4e4e;
+    fill: transparent;
+    stroke-linecap: round;
+    stroke-width: 5;
+}
+#imp .white-line {
+    border-top: solid 1px white;
+    padding-bottom: 5px;
+    width: 50%;
+}
+
+
 a.active{
     color: #fd9400 !important;
 }
 .top_poster{
+    max-width: 1600px;
+    margin: 0 auto;
+
     padding-top: 170px;
     padding-bottom: 90px;
     background: url("../img/top_bg.jpg");
@@ -467,6 +492,8 @@ box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.45);
     background-size: cover;
     background-position: 0px -2px;
     background-repeat: no-repeat;
+
+    z-index: 200;
 
     /*    display: none;*/
 }

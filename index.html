@@ -55,13 +55,35 @@
  </div>
 
 <div class="content">
-  <div class="top_poster container-fluid">
-   <div class="container">
-     <img src="img/logo_white.png" class="img-responsive">
-     <h1>Wir übernehmen Verantwortung<br>
-        für Ihre EDV und IT-Landschaft.</h1>
+
+  <div id="full-with-poster-container">
+    <div id="imp">
+      <div class="close_icon">
+        <svg viewbox="0 0 50 50">
+          <path class="close-x" d="M 15,15 L 35,35 M 35,15 L 15,35" />
+        </svg>
+      </div>
+
+      <h3>§§ Impressum</h3>
+      <p>D A T E N R E I S E B U E R O<br>
+        EDV & IT Management und Dienstleistung GmbH</p>
+      <div class="white-line"></div>
+      <p>Büro GRAZ:<br>
+      Neutorgasse 51, 8010 Graz</p>
+      <div class="white-line"></div>
+      <p><a href="tel:+43316890045">Tel: +43 316 890 045</a><br>
+      Fax: +43 316 890 045 15<br>
+        <a href="mailto:office@drb.at"></a>office@drb.at</a></p>
+    </div>
+
+    <div class="top_poster container-fluid">
+     <div class="container">
+       <img src="img/logo_white.png" class="img-responsive">
+       <h1>Wir übernehmen Verantwortung<br>
+          für Ihre EDV und IT-Landschaft.</h1>
+     </div>
    </div>
- </div>
+  </div>
 
  <div class="welcome container-fluid">
    <div class="container">
@@ -236,13 +258,7 @@
      </div>
     </div>
 </div>
-<div id="imp">
-  <h3>Disebüro atenreist</h3>
-  <p>Disebüro atenreist ein EDV- und IT-Dienstleistungs- und Beratungsunternehmen für Komplettlösungen aus einer Hand und
-     steht für langfristige Partnerschaften, wirtschaftliches Denken, Nachhaltigkeit und effiziente Betreuung.</p>
-     <div class="close_icon"><span>x</span></div>
-</div>
- 
+
 
 <!--<script src="js/jquery-3.1.0.min.js"></script>-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
@@ -265,10 +281,10 @@
     });
   });
   $('a.imp_link').click(function(){
-    $('#imp').fadeToggle();
+    $('#imp').toggleClass('shown');
     $(this).toggleClass('active');
     $('#imp .close_icon').click(function(){
-      $('#imp').fadeOut();
+      $('#imp').removeClass('shown');
       $('a.imp_link').removeClass('active');
     });
   });
