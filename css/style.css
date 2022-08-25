@@ -516,6 +516,20 @@ a.active {
 .contacts {
   position: relative;
 }
+#consent-block {
+    margin-bottom: 30px;
+    display: none;
+}
+
+#consent-block button {
+    background-color: #fd9400;
+    color: white;
+    font-size: 14px;
+    padding: 5px 10px;
+    margin-top: 15px;
+    border-radius: 3px;
+
+}
 
 .contacts #map {
   position: absolute;
@@ -525,6 +539,7 @@ a.active {
   left: 0;
   width: 100% !important;
   height: 400px;
+  background-color: #4e4e4e;
 }
 
 .contacts .container {
@@ -641,7 +656,7 @@ table {
   right: 30px;
   bottom: -50px;
   width: 40px;
-  height: 32px;
+  height: 40px;
   background-color: black;
   background-image: url("../img/uparrow.svg");
   opacity: 0.4;
