@@ -516,9 +516,20 @@ a.active {
 .contacts {
   position: relative;
 }
+
 #consent-block {
     margin-bottom: 30px;
     display: none;
+}
+
+#consent-block p {
+    font-family: "OpenSans-Regular";
+    line-height: 1.2;    
+}
+
+#consent-block h5 {
+    font-size: 14px;
+    margin-bottom: 10px;
 }
 
 #consent-block button {
