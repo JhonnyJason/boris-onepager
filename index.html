@@ -210,7 +210,7 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid" id="consent-block">
+    <!-- div class="container-fluid" id="consent-block">
         <div class="container">
         <h5>Googlemaps braucht Ihre Zustimmung</h5>
         <p>Ich erlaube, dass Googlemaps Cookies setzt und an Google sendet.</p>
@@ -219,9 +219,9 @@
       <div class="container">
         <button id="consent-button">Ich stimme zu</button>
       </div>
-    </div>
+    </div -->
     <div class="contacts container-fluid">
-      <div id="map"></div>
+      <a href="https://goo.gl/maps/pPXVsgA9ULEnmJhNA" target="_blank"><div id="map"></div></a>
       <div class="container">
         <div class="contact_box_title">
           <h6>D A T E N R E I S E B U E R O</h6>
@@ -243,7 +243,7 @@
           </div>
           <div class="block">
             <div class="icons" style="background-position: 0px -59px"></div>
-            <p>Büro GRAZ<br> Neutorgasse 51, 8010 Graz</p>
+            <p>Büro GRAZ<br> <a href="https://goo.gl/maps/pPXVsgA9ULEnmJhNA" target="_blank">Neutorgasse 51, 8010 Graz</a></p>
           </div>
           <div class="block">
             <div class="icons" style="background-position: 0px -115px; height: 25px"></div>
@@ -416,50 +416,50 @@
         //google Maps API --------------------------------------------------------------------------------------
         function initMap() {
 
-            var position = {
-                lat: 47.0674631,
-                lng: 15.4378364
-            };
+            // var position = {
+            //     lat: 47.0674631,
+            //     lng: 15.4378364
+            // };
 
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 15,
-                center: position
-            });
+            // var map = new google.maps.Map(document.getElementById('map'), {
+            //     zoom: 15,
+            //     center: position
+            // });
 
-            var marker = new google.maps.Marker({
-                position: position,
-                map: map
-            });
+            // var marker = new google.maps.Marker({
+            //     position: position,
+            //     map: map
+            // });
         }
     </script>
     
 
     <script>
-        const consentBlock = document.getElementById("consent-block")
-        const consentButton = document.getElementById("consent-button")
+        // const consentBlock = document.getElementById("consent-block")
+        // const consentButton = document.getElementById("consent-button")
 
 
-        function letMapInit() {
-            let script = document.createElement('script');
-            script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDvn9E6v2jQ7ETIc1s4Soj9iOE9NFrlnb0&callback=initMap";
-            document.body.append(script);
-        }
+        // function letMapInit() {
+        //     let script = document.createElement('script');
+        //     script.src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDvn9E6v2jQ7ETIc1s4Soj9iOE9NFrlnb0&callback=initMap";
+        //     document.body.append(script);
+        // }
 
-        function consentClicked() {
-            localStorage.setItem("google-consent", "true")
-            consentBlock.style.display = "none"
-            letMapInit()
-        }
+        // function consentClicked() {
+        //     localStorage.setItem("google-consent", "true")
+        //     consentBlock.style.display = "none"
+        //     letMapInit()
+        // }
 
 
-        const consent = localStorage.getItem("google-consent")
+        // const consent = localStorage.getItem("google-consent")
     
-        if(consent == "true") {
-            letMapInit()
-        } else {
-            consentBlock.style.display = "block"
-            consentButton.addEventListener("click", consentClicked)
-        }
+        // if(consent == "true") {
+        //     letMapInit()
+        // } else {
+        //     consentBlock.style.display = "block"
+        //     consentButton.addEventListener("click", consentClicked)
+        // }
 
     </script>
     

@@ -551,6 +551,11 @@ a.active {
   width: 100% !important;
   height: 400px;
   background-color: #4e4e4e;
+  background-image: url("../img/maps-screenshot.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
 }
 
 .contacts .container {
@@ -672,7 +677,7 @@ table {
   background-image: url("../img/uparrow.svg");
   opacity: 0.4;
   background-size: cover;
-  background-position: 0px -2px;
+  background-position: 0px 0px;
   background-repeat: no-repeat;
   z-index: 200;
   /*    display: none;*/
